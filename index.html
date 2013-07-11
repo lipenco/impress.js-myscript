@@ -47,9 +47,12 @@
 </div>
 
 <script>
-var element = document.querySelector(".step");
-element.dataset.x="+300";
-element.dataset.y="+400";  
+var elements = document.querySelectorAll(".step");
+for(var index=0; index<elements.length; index++)
+{
+ elements[index].dataset.x="1300";
+ elements[index].dataset.y="400";  
+});
 
 
 </script>
