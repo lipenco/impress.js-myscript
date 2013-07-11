@@ -41,19 +41,20 @@
     </div>
 
     
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    <div id="overview" class="step" data-x=3000 data-y="1500" data-scale="10">
     </div>
 
 </div>
 
 <script>
 var elements = document.querySelectorAll(".step");
+var position = 1000;
 for(var index=0; index<elements.length; index++)
 {
- elements[index].dataset.x="1300";
- elements[index].dataset.y="400";  
-});
-
+ elements[index].dataset.x=position;
+  position = position + 100;
+}
+);
 
 </script>
 
