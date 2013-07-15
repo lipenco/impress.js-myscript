@@ -12,7 +12,6 @@
 </script>
 
 
-
 linear template
 <script>
 var elements = document.querySelectorAll(".step");
@@ -41,7 +40,26 @@ for (var i = 0; i < elements.length; i++) {
 
 </script>
 
-grid template
+grid template (horizontal)
+<script>
+var elements = document.querySelectorAll(".step");
+var positionX = 100;
+var positionY = 100;
+for (var index = 0; index < elements.length; index++) {
+    elements[index].dataset.x=positionX;
+    elements[index].dataset.y=positionY;
+  if ((index+1)%4==0) {
+      positionY = positionY + 1000;
+      positionX = 100;
+    }
+  else {
+      positionX = positionX + 1000;
+    }
+}
+</script>
+
+
+grid template (vertical)
 <script>
 var elements = document.querySelectorAll(".step");
 var positionX = 100;
@@ -50,11 +68,11 @@ for (var index = 0; index < elements.length; index++) {
     elements[index].dataset.x=positionX;
     elements[index].dataset.y=positionY;
   if ((index+1) %4==0) {
-      positionY = positionY + 1000;
-      positionX = 100;
+      positionX = positionX + 1000;
+      positionY = 100;
     }
   else {
-      positionX = positionX + 1000;
+      positionY = positionY + 1000;
     }
 }
 </script>
