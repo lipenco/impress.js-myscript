@@ -27,7 +27,6 @@ for(var index=0; index<elements.length; index++)
 
 circle template
  <script>
-
 var elements = document.querySelectorAll(".step");
 var r = 2000;
 for (var i = 0; i < elements.length; i++) {
@@ -40,4 +39,22 @@ for (var i = 0; i < elements.length; i++) {
   elements[i].dataset.rotate = Math.round(rotation);
 }
 
+</script>
+
+grid template
+<script>
+var elements = document.querySelectorAll(".step");
+var positionX = 100;
+var positionY = 100;
+for (var index = 0; index < elements.length; index++) {
+    elements[index].dataset.x=positionX;
+    elements[index].dataset.y=positionY;
+  if ((index+1) %4==0) {
+      positionY = positionY + 1000;
+      var positionX = 100;
+    }
+  else {
+      positionX = positionX + 1000;
+    }
+}
 </script>

@@ -28,57 +28,72 @@
 <div id="impress">
 
     <div class="step slide">
-        <q>Aren't you just <b>bored</b> with all those slides-based presentations?</q>
+        <q>slide 1</q>
     </div>
 
     
     <div class="step slide">
-        <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
+        <q>slide 2</q>
     </div>
 
     <div  class="step slide">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+        <q>slide 3</q>
     </div>
 
    <div  class="step slide">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+        <q>slide 4</q>
     </div>
 
     <div  class="step slide">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+        <q>slide 5</q>
     </div>
 
     <div  class="step slide">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+        <q>slide 6</q>
     </div>
 
        <div  class="step slide">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+        <q>slide 7</q>
+    </div>
+
+      <div  class="step slide">
+        <q>slide 8</q>
+    </div>
+
+    <div  class="step slide">
+        <q>slide 8</q>
+    </div>
+
+       <div  class="step slide">
+        <q>slide 10</q>
     </div>
     
     <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
     </div>
 
 </div>
+
 <script>
-
 var elements = document.querySelectorAll(".step");
-var r = 2000;
-for (var i = 0; i < elements.length; i++) {
-  var phi = -i/(elements.length-1) * 2 * Math.PI;
-  var x = r * Math.cos(phi);
-  var y = r * Math.sin(phi);
-  var rotation = phi/(2*Math.PI) * 360 - 90;
-  elements[i].dataset.x = Math.round(x);
-  elements[i].dataset.y = Math.round(y);
-  elements[i].dataset.rotate = Math.round(rotation);
+var positionX = 100;
+var positionY = 100;
+for (var index = 0; index < elements.length; index++) {
+    elements[index].dataset.x=positionX;
+    elements[index].dataset.y=positionY;
+  if ((index+1) %4==0) {
+      positionY = positionY + 1000;
+      var positionX = 100;
+    }
+  else {
+      positionX = positionX + 1000;
+    }
 }
-
 </script>
 
 
 
-<script src="js/impress.js"></script>
+
+<script src="js/impress.js"> </script>
 <script>impress().init();</script>
 
 
