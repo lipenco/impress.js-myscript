@@ -86,3 +86,37 @@ for (var index = 0; index < elements.length; index++) {
     }
 }
 </script>
+
+
+6. switch template (vertical)
+<script>
+       var elements = document.querySelectorAll(".step");
+    var positionX = 100;
+    var positionY = 100;
+    
+    numberOfColumns = 3;
+    
+    var rowType = "even"
+    for (var index = 0; index < elements.length; index++) {
+        elements[index].dataset.x=positionX;
+        elements[index].dataset.y=positionY;
+        if ((index+1)%numberOfColumns==0) {
+            positionY = positionY + 1000;
+            if(rowType=="even"){
+                rowType = "odd"
+                positionX = (1000 * (numberOfColumns -1)) + 100;
+            } else {
+                rowType = "even"
+                positionX = 100;
+            }
+        }
+        else {
+            if(rowType=="even"){
+                positionX = positionX + 1000;
+            } else {
+                positionX = positionX - 1000;
+            }
+        }
+    }
+
+</script>
