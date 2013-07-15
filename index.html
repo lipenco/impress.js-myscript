@@ -73,21 +73,19 @@
 
 </div>
 
-<script>
+ <script>
 var elements = document.querySelectorAll(".step");
-var positionX = 100;
-var positionY = 100;
-for (var index = 0; index < elements.length; index++) {
-    elements[index].dataset.x=positionX;
-    elements[index].dataset.y=positionY;
-  if ((index+1) %4==0) {
-      positionX = positionX + 1000;
-      positionY = 100;
-    }
-  else {
-      positionY = positionY + 1000;
-    }
+var r = 2000;
+for (var i = 0; i < elements.length; i++) {
+  var phi = -i/(elements.length-1) * 2 * Math.PI;
+  var x = r * Math.cos(phi);
+  var y = r * Math.sin(phi);
+  var rotation = phi/(2*Math.PI) * 360 ;
+  elements[i].dataset.x = Math.round(x);
+  elements[i].dataset.y = Math.round(y);
+  elements[i].dataset.rotate = Math.round(rotation);
 }
+
 </script>
 
 
