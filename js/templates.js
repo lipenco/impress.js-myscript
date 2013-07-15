@@ -23,8 +23,17 @@ for(var index=0; index<elements.length; index++)
 }
  </script>
 
+z-data template
+ <script>
+var elements = document.querySelectorAll(".step");
+var positionZ = 1000;
+for (var index = 0; index < elements.length; index++) {
+    elements[index].dataset.z=positionZ;
+     positionZ = positionZ + 1200;
+}
+</script>
 
-circle template
+
  <script>
 var elements = document.querySelectorAll(".step");
 var r = 2000;
@@ -32,11 +41,12 @@ for (var i = 0; i < elements.length; i++) {
   var phi = -i/(elements.length-1) * 2 * Math.PI;
   var x = r * Math.cos(phi);
   var y = r * Math.sin(phi);
-  var rotation = phi/(2*Math.PI) * 360 - 90;
+  var rotation = phi/(2*Math.PI) * 360 ;
   elements[i].dataset.x = Math.round(x);
   elements[i].dataset.y = Math.round(y);
   elements[i].dataset.rotate = Math.round(rotation);
 }
+</script>
 
 </script>
 
