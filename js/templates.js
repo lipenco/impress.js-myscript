@@ -51,7 +51,7 @@ for (var index = 0; index < elements.length; index++) {
     elements[index].dataset.y=positionY;
   if ((index+1) %4==0) {
       positionY = positionY + 1000;
-      var positionX = 100;
+      positionX = 100;
     }
   else {
       positionX = positionX + 1000;
