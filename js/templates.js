@@ -1,6 +1,6 @@
  
 
- vertical template:
+ 1. vertical template:
 <script>
  var elements = document.querySelectorAll(".step");
  var position = 100;
@@ -12,7 +12,7 @@
 </script>
 
 
-linear template
+2. linear template
 <script>
 var elements = document.querySelectorAll(".step");
 var position = 100;
@@ -23,7 +23,7 @@ for(var index=0; index<elements.length; index++)
 }
  </script>
 
-z-data template
+3. z-data template
  <script>
 var elements = document.querySelectorAll(".step");
 var positionZ = 1000;
@@ -33,7 +33,7 @@ for (var index = 0; index < elements.length; index++) {
 }
 </script>
 
-
+4. circle template
  <script>
 var elements = document.querySelectorAll(".step");
 var r = 2000;
@@ -48,9 +48,9 @@ for (var i = 0; i < elements.length; i++) {
 }
 </script>
 
-</script>
 
-grid template (horizontal)
+
+5. grid template (horizontal)
 <script>
 var elements = document.querySelectorAll(".step");
 var positionX = 100;
@@ -69,7 +69,7 @@ for (var index = 0; index < elements.length; index++) {
 </script>
 
 
-grid template (vertical)
+6. grid template (vertical)
 <script>
 var elements = document.querySelectorAll(".step");
 var positionX = 100;
