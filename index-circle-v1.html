@@ -13,7 +13,7 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
 
-    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="css/impress-my-theme.css" rel="stylesheet" />
     
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -25,47 +25,47 @@
 
 <div id="impress">
 
-    <div class="step slide">
-        <q>slide 1</q>
+    <div class="step slide-circle">
+        <h2>Slide 1</h2>
     </div>
     
-    <div class="step slide">
-        <q>slide 2</q>
+    <div class="step slide-circle">
+          <h2>Slide 2</h2>
     </div>
 
-    <div  class="step slide">
-        <q>slide 3</q>
+    <div  class="step slide-circle">
+        <h2>Slide 3</h2>
     </div>
 
-   <div  class="step slide">
-        <q>slide 4</q>
+   <div  class="step slide-circle">
+      <h2>Slide 4</h2>
     </div>
 
-    <div  class="step slide">
-        <q>slide 5</q>
+    <div  class="step slide-circle">
+         <h2>Slide 5</h2>
     </div>
 
-    <div  class="step slide">
-        <q>slide 6</q>
+    <div  class="step slide-circle">
+         <h2>Slide 6</h2>
     </div>
 
-       <div  class="step slide">
-        <q>slide 7</q>
+       <div  class="step slide-circle">
+        <h2>Slide 7</h2>
     </div>
 
-      <div  class="step slide">
-        <q>slide 8</q>
+      <div  class="step slide-circle">
+         <h2>Slide 8</h2>
     </div>
 
-    <div  class="step slide">
-        <q>slide 8</q>
+    <div  class="step slide-circle">
+        <h2>Slide 9</h2>
     </div>
 
-       <div  class="step slide">
-        <q>slide 10</q>
+       <div  class="step slide-circle">
+          <h2>Slide 10</h2>
     </div>
     
-    <div id="overview" class="step" data-x="100" data-y="0" data-scale="10">
+    <div id="overview" class="step" data-x="0" data-y="1000" data-scale="5">
     </div>
 
 </div>
@@ -78,10 +78,11 @@
       var phi = -i/(elements.length-1) * 2 * Math.PI;
       var x = r * Math.cos(phi);
       var y = r * Math.sin(phi);
-      var rotation = phi/(2*Math.PI) * 360 ;
+      var rotation = phi/(2*Math.PI) * 360-90 ;
       elements[i].dataset.x = Math.round(x);
       elements[i].dataset.y = Math.round(y);
-      elements[i].dataset.rotate = Math.round(rotation);
+      elements[i].dataset.rotateY = Math.round(rotation);
+      elements[i].dataset.rotateX = 90;
      }
 </script>
 
