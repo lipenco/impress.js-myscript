@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+
+<body class="impress-not-supported">
+
+
+<div id="impress">
+
+    <div class="step slide">
+        <q>slide 1</q>
+    </div>
+    
+    <div class="step slide">
+        <q>slide 2</q>
+    </div>
+
+    <div  class="step slide">
+        <q>slide 3</q>
+    </div>
+
+   <div  class="step slide">
+        <q>slide 4</q>
+    </div>
+
+    <div  class="step slide">
+        <q>slide 5</q>
+    </div>
+
+    <div  class="step slide">
+        <q>slide 6</q>
+    </div>
+
+       <div  class="step slide">
+        <q>slide 7</q>
+    </div>
+
+      <div  class="step slide">
+        <q>slide 8</q>
+    </div>
+
+    <div  class="step slide">
+        <q>slide 8</q>
+    </div>
+
+       <div  class="step slide">
+        <q>slide 10</q>
+    </div>
+    
+    <div id="overview" class="step" data-x="100" data-y="0" data-scale="10">
+    </div>
+
+</div>
+
+
+<script>
+    var elements = document.querySelectorAll(".step");
+    var positionX = 100;
+    var positionY = 100;
+    for (var index = 0; index < elements.length; index++) {
+    elements[index].dataset.x=positionX;
+    elements[index].dataset.y=positionY;
+    if ((index+1) %4==0) {
+    positionX = positionX + 1000;
+    positionY = 100;
+    }
+    else {
+      positionY = positionY + 1000;
+    }
+}
+</script>
+
+<script src="js/impress.js"> </script>
+<script>impress().init();</script>
+
+
+
+</body>
+</html>
+
+
+
