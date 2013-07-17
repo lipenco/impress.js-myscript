@@ -71,19 +71,9 @@
 </div>
 
 
-<script>
-    var elements = document.querySelectorAll(".step");
-    var positionZ = 1000;
-    for (var index = 0; index < elements.length; index++) {
-    elements[index].dataset.z=positionZ;
-    positionZ = positionZ + 1200;
-    }
-</script>
-
+<script src="js/impress-layouts.js"> </script>
 <script src="js/impress.js"> </script>
-<script>impress().init();</script>
-
-
+<script>layoutDeep(); impress().init();</script>
 
 </body>
 </html>

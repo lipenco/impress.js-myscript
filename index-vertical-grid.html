@@ -87,26 +87,9 @@
 </div>
 
 
-<script>
-    var elements = document.querySelectorAll(".step");
-    var positionX = 100;
-    var positionY = 100;
-    var numberOfColumns = 4
-    for (var index = 0; index < elements.length; index++) {
-    elements[index].dataset.x=positionX;
-    elements[index].dataset.y=positionY;
-    if ((index+1) %numberOfColumns==0) {
-    positionX = positionX + 1000;
-    positionY = 100;
-    }
-    else {
-      positionY = positionY + 1000;
-    }
-}
-</script>
-
+<script src="js/impress-layouts.js"> </script>
 <script src="js/impress.js"> </script>
-<script>impress().init();</script>
+<script>layoutVerticalGrid(); impress().init();</script>
 
 
 

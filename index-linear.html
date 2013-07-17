@@ -71,28 +71,9 @@
 </div>
 
 
-<script>
-    var elements = document.querySelectorAll(".step");
-    var position = 100;
-    var scale = 1;
-    for(var index=0; index<elements.length; index++)
-    {
-     elements[index].dataset.x=position;
-     position = position + 2000;
-     elements[index].dataset.scale=scale;
-     if (index%2==0) {
-         scale = 2;
-     }
-     else {
-         scale = 1;
-     }
-    }
-</script>
-
+<script src="js/impress-layouts.js"> </script>
 <script src="js/impress.js"> </script>
-<script>impress().init();</script>
-
-
+<script>layoutLinear(); impress().init();</script>
 
 </body>
 </html>

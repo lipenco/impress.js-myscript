@@ -1,4 +1,4 @@
-function circleV1Layout(){
+function layoutCircleV1(){
 var elements = document.querySelectorAll(".step");
       var r = 2000;
       for (var i = 0; i < elements.length; i++) {
@@ -13,7 +13,7 @@ var elements = document.querySelectorAll(".step");
      }
 }
 
-function circleV2Layout(){
+function layoutCircleV2(){
     var elements = document.querySelectorAll(".step");
       var r = 2000;
       for (var i = 0; i < elements.length; i++) {
@@ -28,7 +28,7 @@ function circleV2Layout(){
      }
 }
 
-function circleV3Layout(){
+function layoutCircleV3(){
    var elements = document.querySelectorAll(".step");
       var r = 2000;
       for (var i = 0; i < elements.length; i++) {
@@ -42,7 +42,7 @@ function circleV3Layout(){
      }
 }
 
-function circleV4Layout(){
+function layoutCircleV4(){
   var elements = document.querySelectorAll(".step");
       var r = 2000;
       for (var i = 0; i < elements.length; i++) {
@@ -57,7 +57,7 @@ function circleV4Layout(){
      }
 }
 
-function deepLayout(){
+function layoutDeep(){
   var elements = document.querySelectorAll(".step");
     var positionZ = 1000;
     for (var index = 0; index < elements.length; index++) {
@@ -67,7 +67,7 @@ function deepLayout(){
 }
 
 
-function linearGridLayout(){
+function layoutLinearGrid(){
      var elements = document.querySelectorAll(".step");
      var positionX = 100;
      var positionY = 100;
@@ -84,7 +84,7 @@ function linearGridLayout(){
    }
 }
 
-function linearLayout(){
+function layoutLinear(){
    var elements = document.querySelectorAll(".step");
     var position = 100;
     var scale = 1;
@@ -103,7 +103,7 @@ function linearLayout(){
 }
 
 
-function snakeGridLayout(){
+function layoutSnakeGrid(){
  var elements = document.querySelectorAll(".step");
     var positionX = 100;
     var positionY = 100;
@@ -133,7 +133,7 @@ function snakeGridLayout(){
 }
 
 
-function verticalGridLayout(){
+function layoutVerticalGrid(){
     var elements = document.querySelectorAll(".step");
     var positionX = 100;
     var positionY = 100;
@@ -152,7 +152,7 @@ function verticalGridLayout(){
 }
 
 
-function verticalLayout(){
+function layoutVertical(){
   var elements = document.querySelectorAll(".step");
      var position = 100;
      for(var index=0; index<elements.length; index++)
