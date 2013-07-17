@@ -64,8 +64,24 @@
        <div  class="step slide">
         <q>slide 10</q>
     </div>
+
+        <div  class="step slide">
+        <q>slide 11</q>
+    </div>
+
+      <div  class="step slide">
+        <q>slide 12</q>
+    </div>
+
+    <div  class="step slide">
+        <q>slide 13</q>
+    </div>
+
+       <div  class="step slide">
+        <q>slide 14</q>
+    </div>
     
-    <div id="overview" class="step" data-x="100" data-y="0" data-scale="10">
+    <div id="overview" class="step" data-x="100" data-y="1000" data-scale="8">
     </div>
 
 </div>
@@ -75,10 +91,11 @@
     var elements = document.querySelectorAll(".step");
     var positionX = 100;
     var positionY = 100;
+    var numberOfColumns = 4
     for (var index = 0; index < elements.length; index++) {
     elements[index].dataset.x=positionX;
     elements[index].dataset.y=positionY;
-    if ((index+1) %4==0) {
+    if ((index+1) %numberOfColumns==0) {
     positionX = positionX + 1000;
     positionY = 100;
     }
