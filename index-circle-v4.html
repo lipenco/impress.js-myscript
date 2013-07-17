@@ -65,7 +65,7 @@
           <h2>Slide 10</h2>
     </div>
     
-    <div id="overview" class="step" data-x="0" data-y="1000" data-scale="5">
+    <div id="overview" class="step" data-x="0" data-y="0" data-scale="7">
     </div>
 
 </div>
@@ -81,7 +81,8 @@
       var rotation = phi/(2*Math.PI) * 360-90 ;
       elements[i].dataset.x = Math.round(x);
       elements[i].dataset.y = Math.round(y);
-      elements[i].dataset.rotate = Math.round(rotation);
+      elements[i].dataset.rotateY = Math.round(rotation)-90;
+      elements[i].dataset.rotateX = 90; 
      }
 </script>
 
