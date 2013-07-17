@@ -1,6 +1,6 @@
-function layoutCircleV1(r) {
+function layoutCircleV1(radius) {
     var elements = document.querySelectorAll(".step");
-    var r = r;
+    var r = radius;
     for (var i = 0; i < elements.length; i++) {
         var phi = -i / (elements.length - 1) * 2 * Math.PI;
         var x = r * Math.cos(phi);
@@ -13,9 +13,9 @@ function layoutCircleV1(r) {
     }
 }
 
-function layoutCircleV2(r) {
+function layoutCircleV2(radius) {
     var elements = document.querySelectorAll(".step");
-    var r = r;
+    var r = radius;
     for (var i = 0; i < elements.length; i++) {
         var phi = -i / (elements.length - 1) * 2 * Math.PI;
         var x = r * Math.cos(phi);
@@ -28,9 +28,9 @@ function layoutCircleV2(r) {
     }
 }
 
-function layoutCircleV3(r) {
+function layoutCircleV3(radius) {
     var elements = document.querySelectorAll(".step");
-    var r = r;
+    var r = radius;
     for (var i = 0; i < elements.length; i++) {
         var phi = -i / (elements.length - 1) * 2 * Math.PI;
         var x = r * Math.cos(phi);
@@ -42,9 +42,9 @@ function layoutCircleV3(r) {
     }
 }
 
-function layoutCircleV4(r) {
+function layoutCircleV4(radius) {
     var elements = document.querySelectorAll(".step");
-    var r = r;
+    var r = radius;
     for (var i = 0; i < elements.length; i++) {
         var phi = -i / (elements.length - 1) * 2 * Math.PI;
         var x = r * Math.cos(phi);
@@ -74,7 +74,7 @@ function layoutLinearGrid(distanceX, distanceY) {
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.x = positionX;
         elements[index].dataset.y = positionY;
-        if ((index + 1) % 4 == 0) {
+        if ((index + 1) % 4 === 0) {
             positionY = positionY + distanceY;
             positionX = 100;
         } else {
@@ -91,7 +91,7 @@ function layoutLinear(distance) {
         elements[index].dataset.x = position;
         position = position + distance;
         elements[index].dataset.scale = scale;
-        if (index % 2 == 0) {
+        if (index % 2 === 0) {
             scale = 2;
         } else {
             scale = 1;
@@ -104,21 +104,21 @@ function layoutSnakeGrid(numberOfColumns) {
     var elements = document.querySelectorAll(".step");
     var positionX = 100;
     var positionY = 100;
-    var rowType = "even"
+    var rowType = "even";
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.x = positionX;
         elements[index].dataset.y = positionY;
-        if ((index + 1) % numberOfColumns == 0) {
+        if ((index + 1) % numberOfColumns === 0) {
             positionY = positionY + 1000;
-            if (rowType == "even") {
-                rowType = "odd"
+            if (rowType === "even") {
+                rowType = "odd";
                 positionX = (1000 * (numberOfColumns - 1)) + 100;
             } else {
-                rowType = "even"
+                rowType = "even";
                 positionX = 100;
             }
         } else {
-            if (rowType == "even") {
+            if (rowType === "even") {
                 positionX = positionX + 1000;
             } else {
                 positionX = positionX - 1000;
@@ -132,11 +132,11 @@ function layoutVerticalGrid(distanceX, distanceY) {
     var elements = document.querySelectorAll(".step");
     var positionX = 100;
     var positionY = 100;
-    var numberOfColumns = 4
+    var numberOfColumns = 4;
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.x = positionX;
         elements[index].dataset.y = positionY;
-        if ((index + 1) % numberOfColumns == 0) {
+        if ((index + 1) % numberOfColumns === 0) {
             positionX = positionX + distanceX;
             positionY = 100;
         } else {
