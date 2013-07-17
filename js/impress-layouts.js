@@ -1,6 +1,6 @@
-function layoutCircleV1(){
+function layoutCircleV1(r){
 var elements = document.querySelectorAll(".step");
-      var r = 2000;
+      var r = r;
       for (var i = 0; i < elements.length; i++) {
       var phi = -i/(elements.length-1) * 2 * Math.PI;
       var x = r * Math.cos(phi);
@@ -13,9 +13,9 @@ var elements = document.querySelectorAll(".step");
      }
 }
 
-function layoutCircleV2(){
+function layoutCircleV2(r){
     var elements = document.querySelectorAll(".step");
-      var r = 2000;
+      var r = r;
       for (var i = 0; i < elements.length; i++) {
       var phi = -i/(elements.length-1) * 2 * Math.PI;
       var x = r * Math.cos(phi);
@@ -28,9 +28,9 @@ function layoutCircleV2(){
      }
 }
 
-function layoutCircleV3(){
+function layoutCircleV3(r){
    var elements = document.querySelectorAll(".step");
-      var r = 2000;
+      var r = r;
       for (var i = 0; i < elements.length; i++) {
       var phi = -i/(elements.length-1) * 2 * Math.PI;
       var x = r * Math.cos(phi);
@@ -42,9 +42,9 @@ function layoutCircleV3(){
      }
 }
 
-function layoutCircleV4(){
+function layoutCircleV4(r){
   var elements = document.querySelectorAll(".step");
-      var r = 2000;
+      var r = r;
       for (var i = 0; i < elements.length; i++) {
       var phi = -i/(elements.length-1) * 2 * Math.PI;
       var x = r * Math.cos(phi);
@@ -57,9 +57,9 @@ function layoutCircleV4(){
      }
 }
 
-function layoutDeep(){
+function layoutDeep(distance){
   var elements = document.querySelectorAll(".step");
-    var positionZ = 1000;
+    var positionZ = distance;
     for (var index = 0; index < elements.length; index++) {
     elements[index].dataset.z=positionZ;
     positionZ = positionZ + 1200;
@@ -67,7 +67,7 @@ function layoutDeep(){
 }
 
 
-function layoutLinearGrid(){
+function layoutLinearGrid(distanceX, distanceY){
      var elements = document.querySelectorAll(".step");
      var positionX = 100;
      var positionY = 100;
@@ -75,23 +75,23 @@ function layoutLinearGrid(){
      elements[index].dataset.x=positionX;
      elements[index].dataset.y=positionY;
      if ((index+1)%4==0) {
-     positionY = positionY + 1000;
+     positionY = positionY + distanceY;
      positionX = 100;
     }
   else {
-      positionX = positionX + 1000;
+      positionX = positionX + distanceX;
     }
    }
 }
 
-function layoutLinear(){
+function layoutLinear(distance){
    var elements = document.querySelectorAll(".step");
     var position = 100;
     var scale = 1;
     for(var index=0; index<elements.length; index++)
     {
      elements[index].dataset.x=position;
-     position = position + 2000;
+     position = position + distance;
      elements[index].dataset.scale=scale;
      if (index%2==0) {
          scale = 2;
@@ -103,11 +103,10 @@ function layoutLinear(){
 }
 
 
-function layoutSnakeGrid(){
+function layoutSnakeGrid(numberOfColumns){
  var elements = document.querySelectorAll(".step");
     var positionX = 100;
     var positionY = 100;
-    var numberOfColumns = 4; 
     var rowType = "even"
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.x=positionX;
@@ -133,7 +132,7 @@ function layoutSnakeGrid(){
 }
 
 
-function layoutVerticalGrid(){
+function layoutVerticalGrid(distanceX, distanceY){
     var elements = document.querySelectorAll(".step");
     var positionX = 100;
     var positionY = 100;
@@ -142,22 +141,22 @@ function layoutVerticalGrid(){
     elements[index].dataset.x=positionX;
     elements[index].dataset.y=positionY;
     if ((index+1) %numberOfColumns==0) {
-    positionX = positionX + 1000;
+    positionX = positionX + distanceX;
     positionY = 100;
     }
     else {
-      positionY = positionY + 1000;
+      positionY = positionY + distanceY;
     }
     }
 }
 
 
-function layoutVertical(){
+function layoutVertical(distance){
   var elements = document.querySelectorAll(".step");
      var position = 100;
      for(var index=0; index<elements.length; index++)
      {
       elements[index].dataset.y=position;
-      position = position + 1000;
+      position = position + distance;
      }
 }
