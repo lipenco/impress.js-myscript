@@ -13,7 +13,7 @@
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
 
-    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="css/impress-my-theme.css" rel="stylesheet" />
     
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -65,7 +65,19 @@
         <q>slide 10</q>
     </div>
     
-    <div id="overview" class="step" data-x="100" data-y="0" data-scale="10">
+         <div  class="step slide">
+        <q>slide 11</q>
+    </div>
+
+    <div  class="step slide">
+        <q>slide 12</q>
+    </div>
+
+       <div  class="step slide">
+        <q>slide 13</q>
+    </div>
+
+    <div id="overview" class="step" data-z="1500" data-rotate-y="20" data-rotate-x="-30" data-scale="4">
     </div>
 
 </div>
@@ -75,7 +87,7 @@
     var elements = document.querySelectorAll(".step");
     var positionX = 100;
     var positionY = 100;
-    var numberOfColumns = 3; 
+    var numberOfColumns = 4; 
     var rowType = "even"
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.x=positionX;
