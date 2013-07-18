@@ -72,16 +72,17 @@ function layoutDeep(distance) {
 }
 
 
-function layoutLinearGrid(distanceX, distanceY) {
+function layoutLinearGrid(numberOfColumns, distanceX, distanceY) {
     var elements = document.querySelectorAll(".step");
     var positionX = 100;
     var positionY = 100;
     !distanceX ?  distanceX = 1500 : distanceX ;
     !distanceY ?  distanceY = 1000 : distanceY ;
+    !numberOfColumns ?  numberOfColumns = 5 : numberOfColumns ;
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.x = positionX;
         elements[index].dataset.y = positionY;
-        if ((index + 1) % 4 === 0) {
+        if ((index + 1) % numberOfColumns === 0) {
             positionY = positionY + distanceY;
             positionX = 100;
         } else {
@@ -139,11 +140,11 @@ function layoutSnakeGrid(numberOfColumns, distanceX, distanceY) {
 }
 
 
-function layoutVerticalGrid(distanceX, distanceY) {
+function layoutVerticalGrid(numberOfColumns, distanceX, distanceY) {
     var elements = document.querySelectorAll(".step");
     var positionX = 100;
     var positionY = 100;
-    var numberOfColumns = 4;
+    !numberOfColumns ?  numberOfColumns = 5 : numberOfColumns ;
     !distanceX ?  distanceX = 1500 : distanceX ;
     !distanceY ?  distanceY = 1000 : distanceY ;
     for (var index = 0; index < elements.length; index++) {
