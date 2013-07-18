@@ -1,7 +1,7 @@
 function layoutCircleV1(radius) {
-    var elements = document.querySelectorAll(".step");
+    var elements = document.querySelectorAll(".step");    
+    !radius ?  radius = 1024/(2* Math.tan(Math.PI/elements.length)) : radius ;
     var r = radius;
-    !radius ?  radius = 2000 : radius ;
     for (var i = 0; i < elements.length; i++) {
         var phi = -i / (elements.length - 1) * 2 * Math.PI;
         var x = r * Math.cos(phi);
@@ -16,8 +16,8 @@ function layoutCircleV1(radius) {
 
 function layoutCircleV2(radius) {
     var elements = document.querySelectorAll(".step");
+    !radius ?  radius = 1024/(2* Math.tan(Math.PI/elements.length)) : radius ;
     var r = radius;
-    !radius ?  radius = 2000 : radius ;
     for (var i = 0; i < elements.length; i++) {
         var phi = -i / (elements.length - 1) * 2 * Math.PI;
         var x = r * Math.cos(phi);
@@ -32,8 +32,8 @@ function layoutCircleV2(radius) {
 
 function layoutCircleV3(radius) {
     var elements = document.querySelectorAll(".step");
+    !radius ?  radius = 1024/(2* Math.tan(Math.PI/elements.length)) : radius ;
     var r = radius;
-    !radius ?  radius = 2000 : radius ;
     for (var i = 0; i < elements.length; i++) {
         var phi = -i / (elements.length - 1) * 2 * Math.PI;
         var x = r * Math.cos(phi);
@@ -47,8 +47,8 @@ function layoutCircleV3(radius) {
 
 function layoutCircleV4(radius) {
     var elements = document.querySelectorAll(".step");
-    var r = radius;
-    !radius ?  radius = 2000 : radius ;
+    !radius ?  radius = 1024/(2* Math.tan(Math.PI/elements.length)) : radius ;
+    var r = radius;  
     for (var i = 0; i < elements.length; i++) {
         var phi = -i / (elements.length - 1) * 2 * Math.PI;
         var x = r * Math.cos(phi);
