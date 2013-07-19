@@ -1,6 +1,6 @@
 function layoutCircleV1(radius) {
     var elements = document.querySelectorAll(".step");    
-    !radius ?  radius = 1024/(2* Math.tan(Math.PI/elements.length)) : radius ;
+    radius = radius || 1024/(2* Math.tan(Math.PI/elements.length));
     var r = radius;
     for (var i = 0; i < elements.length; i++) {
         var phi = -i / (elements.length - 1) * 2 * Math.PI;
@@ -16,7 +16,7 @@ function layoutCircleV1(radius) {
 
 function layoutCircleV2(radius) {
     var elements = document.querySelectorAll(".step");
-    !radius ?  radius = 1024/(2* Math.tan(Math.PI/elements.length)) : radius ;
+    radius = radius || 1024/(2* Math.tan(Math.PI/elements.length));
     var r = radius;
     for (var i = 0; i < elements.length; i++) {
         var phi = -i / (elements.length - 1) * 2 * Math.PI;
@@ -32,7 +32,7 @@ function layoutCircleV2(radius) {
 
 function layoutCircleV3(radius) {
     var elements = document.querySelectorAll(".step");
-    !radius ?  radius = 1024/(2* Math.tan(Math.PI/elements.length)) : radius ;
+    radius = radius || 1024/(2* Math.tan(Math.PI/elements.length));
     var r = radius;
     for (var i = 0; i < elements.length; i++) {
         var phi = -i / (elements.length - 1) * 2 * Math.PI;
@@ -47,7 +47,7 @@ function layoutCircleV3(radius) {
 
 function layoutCircleV4(radius) {
     var elements = document.querySelectorAll(".step");
-    !radius ?  radius = 1024/(2* Math.tan(Math.PI/elements.length)) : radius ;
+    radius = radius || 1024/(2* Math.tan(Math.PI/elements.length));
     var r = radius;  
     for (var i = 0; i < elements.length; i++) {
         var phi = -i / (elements.length - 1) * 2 * Math.PI;
@@ -64,7 +64,7 @@ function layoutCircleV4(radius) {
 function layoutDeep(distance) {
     var elements = document.querySelectorAll(".step");
     var positionZ = 1000;
-    !distance ?  distance = 1000 : distance ;
+    distance = distance || 1000;
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.z = positionZ;
         positionZ = positionZ + distance;
@@ -76,9 +76,9 @@ function layoutLinearGrid(numberOfColumns, distanceX, distanceY) {
     var elements = document.querySelectorAll(".step");
     var positionX = 100;
     var positionY = 100;
-    !distanceX ?  distanceX = 1500 : distanceX ;
-    !distanceY ?  distanceY = 1000 : distanceY ;
-    !numberOfColumns ?  numberOfColumns = 5 : numberOfColumns ;
+    distanceX = distanceX || 1500;
+    distanceY = distanceY || 1000;
+    numberOfColumns = numberOfColumns || 5;
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.x = positionX;
         elements[index].dataset.y = positionY;
@@ -95,7 +95,7 @@ function layoutLinear(distance) {
     var elements = document.querySelectorAll(".step");
     var position = 100;
     var scale = 1;
-    !distance ?  distance = 2000 : distance ;
+    distance = distance || 2000;
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.x = position;
         position = position + distance;
@@ -114,9 +114,9 @@ function layoutSnakeGrid(numberOfColumns, distanceX, distanceY) {
     var positionX = 100;
     var positionY = 100;
     var rowType = "even";
-    !numberOfColumns ?  numberOfColumns = 5 : numberOfColumns ;
-    !distanceX ?  distanceX = 1500 : distanceX ;
-    !distanceY ?  distanceY = 1000 : distanceY ;
+    distanceX = distanceX || 1500;
+    distanceY = distanceY || 1000;
+    numberOfColumns = numberOfColumns || 5;
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.x = positionX;
         elements[index].dataset.y = positionY;
@@ -144,9 +144,9 @@ function layoutVerticalGrid(numberOfColumns, distanceX, distanceY) {
     var elements = document.querySelectorAll(".step");
     var positionX = 100;
     var positionY = 100;
-    !numberOfColumns ?  numberOfColumns = 5 : numberOfColumns ;
-    !distanceX ?  distanceX = 1500 : distanceX ;
-    !distanceY ?  distanceY = 1000 : distanceY ;
+    distanceX = distanceX || 1500;
+    distanceY = distanceY || 1000;
+    numberOfColumns = numberOfColumns || 5;
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.x = positionX;
         elements[index].dataset.y = positionY;
@@ -163,7 +163,7 @@ function layoutVerticalGrid(numberOfColumns, distanceX, distanceY) {
 function layoutVertical(distance) {
     var elements = document.querySelectorAll(".step");
     var position = 100;
-    !distance ?  distance = 1000 : distance ;
+    distance = distance || 1000;
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.y = position;
         position = position + distance;
