@@ -1,7 +1,7 @@
 function layoutCircleV1(radius) {
     var elements = document.querySelectorAll(".step");    
     if (!radius || radius < 900) {
-    radius = 1024/(2* Math.tan(Math.PI/elements.length);
+    radius = 1024/(2* Math.tan(Math.PI/elements.length));
     }
     var r = radius;
     for (var i = 0; i < elements.length; i++) {
@@ -19,7 +19,7 @@ function layoutCircleV1(radius) {
 function layoutCircleV2(radius) {
     var elements = document.querySelectorAll(".step");
     if (!radius || radius < 900) {
-    radius = 1024/(2* Math.tan(Math.PI/elements.length);
+    radius = 1024/(2* Math.tan(Math.PI/elements.length));
     }
     var r = radius;
     for (var i = 0; i < elements.length; i++) {
@@ -37,7 +37,7 @@ function layoutCircleV2(radius) {
 function layoutCircleV3(radius) {
     var elements = document.querySelectorAll(".step");
     if (!radius || radius < 900) {
-    radius = 1024/(2* Math.tan(Math.PI/elements.length);
+    radius = 1024/(2* Math.tan(Math.PI/elements.length));
     }
     var r = radius;
     for (var i = 0; i < elements.length; i++) {
@@ -54,7 +54,7 @@ function layoutCircleV3(radius) {
 function layoutCircleV4(radius) {
     var elements = document.querySelectorAll(".step");
     if (!radius || radius < 900) {
-    radius = 1024/(2* Math.tan(Math.PI/elements.length);
+    radius = 1024/(2* Math.tan(Math.PI/elements.length));
     }
     var r = radius;  
     for (var i = 0; i < elements.length; i++) {
