@@ -1,7 +1,7 @@
 function layoutCircleV1(radius) {
-    var elements = document.querySelectorAll(".step");    
+    var elements = document.querySelectorAll(".step");
     if (!radius || radius < 900) {
-    radius = 1024/(2* Math.tan(Math.PI/elements.length));
+        radius = 1024 / (2 * Math.tan(Math.PI / elements.length));
     }
     var r = radius;
     for (var i = 0; i < elements.length; i++) {
@@ -19,7 +19,7 @@ function layoutCircleV1(radius) {
 function layoutCircleV2(radius) {
     var elements = document.querySelectorAll(".step");
     if (!radius || radius < 900) {
-    radius = 1024/(2* Math.tan(Math.PI/elements.length));
+        radius = 1024 / (2 * Math.tan(Math.PI / elements.length));
     }
     var r = radius;
     for (var i = 0; i < elements.length; i++) {
@@ -37,7 +37,7 @@ function layoutCircleV2(radius) {
 function layoutCircleV3(radius) {
     var elements = document.querySelectorAll(".step");
     if (!radius || radius < 900) {
-    radius = 1024/(2* Math.tan(Math.PI/elements.length));
+        radius = 1024 / (2 * Math.tan(Math.PI / elements.length));
     }
     var r = radius;
     for (var i = 0; i < elements.length; i++) {
@@ -54,9 +54,9 @@ function layoutCircleV3(radius) {
 function layoutCircleV4(radius) {
     var elements = document.querySelectorAll(".step");
     if (!radius || radius < 900) {
-    radius = 1024/(2* Math.tan(Math.PI/elements.length));
+        radius = 1024 / (2 * Math.tan(Math.PI / elements.length));
     }
-    var r = radius;  
+    var r = radius;
     for (var i = 0; i < elements.length; i++) {
         var phi = -i / (elements.length - 1) * 2 * Math.PI;
         var x = r * Math.cos(phi);
@@ -73,7 +73,7 @@ function layoutDeep(distance) {
     var elements = document.querySelectorAll(".step");
     var positionZ = 1000;
     if (!distance || distance < 900) {
-    distance = 1000;
+        distance = 1000;
     }
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.z = positionZ;
@@ -87,13 +87,13 @@ function layoutLinearGrid(numberOfColumns, distanceX, distanceY) {
     var positionX = 100;
     var positionY = 100;
     if (!distanceX || distanceX < 900) {
-    distanceX = 1500;
+        distanceX = 1500;
     }
     if (!distanceY || distanceY < 700) {
-    distanceY = 1000;
+        distanceY = 1000;
     }
     if (!numberOfColumns || numberOfColumns < 1) {
-    numberOfColumns = 5;
+        numberOfColumns = 5;
     }
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.x = positionX;
@@ -112,7 +112,7 @@ function layoutLinear(distance) {
     var position = 100;
     var scale = 1;
     if (!distance || distance < 900) {
-    distance = 1500;
+        distance = 1500;
     }
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.x = position;
@@ -133,13 +133,13 @@ function layoutSnakeGrid(numberOfColumns, distanceX, distanceY) {
     var positionY = 100;
     var rowType = "even";
     if (!distanceX || distanceX < 900) {
-    distanceX = 1500;
+        distanceX = 1500;
     }
     if (!distanceY || distanceY < 700) {
-    distanceY = 1000;
+        distanceY = 1000;
     }
     if (!numberOfColumns || numberOfColumns < 1) {
-    numberOfColumns = 5;
+        numberOfColumns = 5;
     }
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.x = positionX;
@@ -169,13 +169,13 @@ function layoutVerticalGrid(numberOfColumns, distanceX, distanceY) {
     var positionX = 100;
     var positionY = 100;
     if (!distanceX || distanceX < 900) {
-    distanceX = 1500;
+        distanceX = 1500;
     }
     if (!distanceY || distanceY < 700) {
-    distanceY = 1000;
+        distanceY = 1000;
     }
     if (!numberOfColumns || numberOfColumns < 1) {
-    numberOfColumns = 5;
+        numberOfColumns = 5;
     }
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.x = positionX;
@@ -194,7 +194,7 @@ function layoutVertical(distance) {
     var elements = document.querySelectorAll(".step");
     var position = 100;
     if (!distance || distance < 700) {
-       distance = 1000;
+        distance = 1000;
     }
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.y = position;
