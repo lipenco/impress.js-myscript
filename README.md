@@ -23,6 +23,8 @@ It is a set of usefull, automaticly generated layouts for impress.js presentatio
 
 10. [Basic Vertical](http://lipen.co/impress.js-myscript/index-vertical.html)
 
+11. [Chain Layout](http://lipen.co/impress.js-myscript/index-chain.html)
+
 
 
 ### Official demo
