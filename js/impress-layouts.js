@@ -69,6 +69,23 @@ function layoutCircleV4(radius) {
     }
 }
 
+function layoutChain(distance) {
+    var elements = document.querySelectorAll(".step");
+    var r = 1024 / (2 * Math.tan(Math.PI / elements.length));
+    var positionX = 0;
+    if (!distance || distance < 700) {
+        distance = 700;
+    }
+    for (var i = 0; i < elements.length; i++) {
+        var phi = -i / (elements.length - 1) * 2 * Math.PI;
+        var rotation = phi / (2 * Math.PI) * 360;
+        elements[i].dataset.rotateX = Math.round(rotation);
+        elements[i].dataset.rotateZ = Math.round(rotation);
+        elements[i].dataset.x = positionX;
+        positionX = positionX + distance;   
+    }
+}
+
 function layoutDeep(distance) {
     var elements = document.querySelectorAll(".step");
     var positionZ = 1000;
