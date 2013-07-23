@@ -85,7 +85,11 @@
 
 <script src="js/impress-layouts.js"> </script>
 <script src="js/impress.js"> </script>
-<script>layoutSnakeGrid(); impress().init();</script>
+<script> layoutVerticalGrid({
+           numberOfColumns: 5,
+           distanceX: 900,
+           distanceY: 800 });
+           impress().init();</script>
 
 
 
