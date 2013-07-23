@@ -1,5 +1,6 @@
 function substeps() {
     var getSubsteps = document.querySelectorAll(".substep");
+    
     var getPresentSubstep = document.querySelectorAll(" .substep");
 
     var triggerEvent = function (el, eventName, detail) {
