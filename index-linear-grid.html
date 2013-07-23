@@ -73,7 +73,10 @@
 
 <script src="js/impress-layouts.js"> </script>
 <script src="js/impress.js"> </script>
-<script>layoutLinearGrid(); impress().init();</script>
+<script> layoutLinearGrid( {
+           numberOfColumns: 4,
+           distanceX: 900,
+           distanceY: 800 } ); impress().init();</script>
 
 
 </body>

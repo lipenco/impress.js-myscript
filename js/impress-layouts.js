@@ -99,18 +99,21 @@ function layoutDeep(distance) {
 }
 
 
-function layoutLinearGrid(numberOfColumns, distanceX, distanceY) {
+function layoutLinearGrid(options) {
+    var numberOfColumns = options.numberOfColumns;
+    var distanceX = options.distanceX;
+    var distanceY = options.distanceY;
     var elements = document.querySelectorAll(".step");
     var positionX = 100;
     var positionY = 100;
     if (!distanceX || distanceX < 900) {
-        distanceX = 1500;
+        options.distanceX = 1500;
     }
     if (!distanceY || distanceY < 700) {
-        distanceY = 1000;
+        options.distanceY = 1000;
     }
     if (!numberOfColumns || numberOfColumns < 1) {
-        numberOfColumns = 5;
+        options.numberOfColumns = 5;
     }
     for (var index = 0; index < elements.length; index++) {
         elements[index].dataset.x = positionX;
