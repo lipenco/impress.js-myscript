@@ -1,4 +1,5 @@
-function layoutCircleV1(radius) {
+function layoutCircleV1(options) {
+    var radius = options.radius;
     var elements = document.querySelectorAll(".step");
     if (!radius || radius < 900) {
         radius = 1024 / (2 * Math.tan(Math.PI / elements.length));
@@ -16,7 +17,8 @@ function layoutCircleV1(radius) {
     }
 }
 
-function layoutCircleV2(radius) {
+function layoutCircleV2(options) {
+    var radius = options.radius;
     var elements = document.querySelectorAll(".step");
     if (!radius || radius < 900) {
         radius = 1024 / (2 * Math.tan(Math.PI / elements.length));
@@ -34,7 +36,8 @@ function layoutCircleV2(radius) {
     }
 }
 
-function layoutCircleV3(radius) {
+function layoutCircleV3(options) {
+    var radius = options.radius;
     var elements = document.querySelectorAll(".step");
     if (!radius || radius < 900) {
         radius = 1024 / (2 * Math.tan(Math.PI / elements.length));
@@ -51,7 +54,8 @@ function layoutCircleV3(radius) {
     }
 }
 
-function layoutCircleV4(radius) {
+function layoutCircleV4(options) {
+    var radius = options.radius;
     var elements = document.querySelectorAll(".step");
     if (!radius || radius < 900) {
         radius = 1024 / (2 * Math.tan(Math.PI / elements.length));
@@ -69,7 +73,8 @@ function layoutCircleV4(radius) {
     }
 }
 
-function layoutChain(distance) {
+function layoutChain(options) {
+    var distance = options.distance;
     var elements = document.querySelectorAll(".step");
     var r = 1024 / (2 * Math.tan(Math.PI / elements.length));
     var positionX = 0;
@@ -86,7 +91,8 @@ function layoutChain(distance) {
     }
 }
 
-function layoutDeep(distance) {
+function layoutDeep(options) {
+    var distance = options.distance;
     var elements = document.querySelectorAll(".step");
     var positionZ = 1000;
     if (!distance || distance < 900) {
@@ -127,7 +133,8 @@ function layoutLinearGrid(options) {
     }
 }
 
-function layoutLinear(distance) {
+function layoutLinear(options) {
+    var distance = options.distance;
     var elements = document.querySelectorAll(".step");
     var position = 100;
     var scale = 1;
@@ -147,7 +154,10 @@ function layoutLinear(distance) {
 }
 
 
-function layoutSnakeGrid(numberOfColumns, distanceX, distanceY) {
+function layoutSnakeGrid(options) {
+    var numberOfColumns = options.numberOfColumns;
+    var distanceX = options.distanceX;
+    var distanceY = options.distanceY;
     var elements = document.querySelectorAll(".step");
     var positionX = 100;
     var positionY = 100;
@@ -184,7 +194,10 @@ function layoutSnakeGrid(numberOfColumns, distanceX, distanceY) {
 }
 
 
-function layoutVerticalGrid(numberOfColumns, distanceX, distanceY) {
+function layoutVerticalGrid(options) {
+    var numberOfColumns = options.numberOfColumns;
+    var distanceX = options.distanceX;
+    var distanceY = options.distanceY;
     var elements = document.querySelectorAll(".step");
     var positionX = 100;
     var positionY = 100;
@@ -210,7 +223,8 @@ function layoutVerticalGrid(numberOfColumns, distanceX, distanceY) {
 }
 
 
-function layoutVertical(distance) {
+function layoutVertical(options) {
+    var distance = options.distance;
     var elements = document.querySelectorAll(".step");
     var position = 100;
     if (!distance || distance < 700) {
