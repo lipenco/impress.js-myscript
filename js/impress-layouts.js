@@ -133,23 +133,40 @@ function layoutLinearGrid(options) {
     }
 }
 
-function layoutLinear(options) {
-    var distance = options.distance;
+// function layoutLinear(options) {
+//     var distance = options.distance;
+//     var elements = document.querySelectorAll(".step");
+//     var position = 100;
+//     var scale = 1;
+//     if (!distance || distance < 900) {
+//         distance = 1500;
+//     }
+//     for (var index = 0; index < elements.length; index++) {
+//         elements[index].dataset.x = position;
+//         position = position + distance;
+//         elements[index].dataset.scale = scale;
+//         if (index % 2 === 0) {
+//             scale = 2;
+//         } else {
+//             scale = 1;
+//         }
+//     }
+// }
+
+
+function layoutLinearStep( stepIndex, distance ) {
+     var position = 0;
+     if (!distance || distance < 900) {
+     distance = 1500;
+     } 
+     position = position + distance;
+  return { x: position};
+}
+
+function layoutLinear(distance) {
     var elements = document.querySelectorAll(".step");
-    var position = 100;
-    var scale = 1;
-    if (!distance || distance < 900) {
-        distance = 1500;
-    }
     for (var index = 0; index < elements.length; index++) {
-        elements[index].dataset.x = position;
-        position = position + distance;
-        elements[index].dataset.scale = scale;
-        if (index % 2 === 0) {
-            scale = 2;
-        } else {
-            scale = 1;
-        }
+      elements[index].dataset.x = layoutLinearStep( index, distance ); 
     }
 }
 
