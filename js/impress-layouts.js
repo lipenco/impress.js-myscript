@@ -1,3 +1,31 @@
+function MoveElementsFromEachOther(distance, elements) {   
+    var position = parseInt(elements[0].dataset.x);
+    for (var index = 0; index < elements.length; index++) {
+      position = position + distance;
+      elements[index].dataset.x = position; 
+    }
+}
+
+function RescaleEveryTwoElements(scale, elements) {
+    for (var index = 0; index < elements.length; index+=2) {
+      elements[index].dataset.scale = 2; 
+    }
+}
+
+function layoutLinear(distance, scale) {
+      var elements = document.querySelectorAll(".step");
+      if (!distance || distance < 1000) {
+        distance = 1500;
+      }
+      elements[0].dataset.x = 0;
+      RescaleEveryTwoElements(scale, elements) ;
+      MoveElementsFromEachOther(distance, elements) ;
+}
+
+
+
+
+
 function layoutCircleV1(options) {
     var radius = options.radius;
     var elements = document.querySelectorAll(".step");
