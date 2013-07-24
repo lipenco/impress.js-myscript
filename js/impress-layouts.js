@@ -148,7 +148,7 @@ function RescaleEveryTwoElements(scale, elements) {
     }
 }
 
- function layoutLinear(distance, scale) {
+function layoutLinear(distance, scale) {
       var elements = document.querySelectorAll(".step");
       elements[0].dataset.x = 0;
       RescaleEveryTwoElements(scale, elements) ;
