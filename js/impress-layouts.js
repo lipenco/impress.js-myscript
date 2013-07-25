@@ -1,8 +1,16 @@
-function MoveElementsFromEachOther(distance, elements) {   
+function MoveElementsFromEachOtherX(distanceX, elements) {   
     var position = parseInt(elements[0].dataset.x);
     for (var index = 0; index < elements.length; index++) {
-      position = position + distance;
+      position = position + distanceX;
       elements[index].dataset.x = position; 
+    }
+}
+
+function MoveElementsFromEachOtherY(distanceY, elements) {   
+    var position = parseInt(elements[0].dataset.x);
+    for (var index = 0; index < elements.length; index++) {
+      position = position + distanceY;
+      elements[index].dataset.y = position; 
     }
 }
 
@@ -12,14 +20,23 @@ function RescaleEveryTwoElements(scale, elements) {
     }
 }
 
-function layoutLinear(distance, scale) {
+function layoutLinear(distanceX, scale) {
       var elements = document.querySelectorAll(".step");
-      if (!distance || distance < 1000) {
-        distance = 1500;
+      if (!distanceX || distanceX < 1000) {
+        distanceX = 1500;
       }
       elements[0].dataset.x = 0;
       RescaleEveryTwoElements(scale, elements) ;
-      MoveElementsFromEachOther(distance, elements) ;
+      MoveElementsFromEachOtherX(distance, elements) ;
+}
+
+function layoutVertical(distanceY) {
+    var elements = document.querySelectorAll(".step");
+    if (!distanceY || distanceY < 700) {
+        distanceY = 1000;
+    }
+    elements[0].dataset.y = 0; 
+    MoveElementsFromEachOtherY(distance, elements) ;
 }
 
 
@@ -162,28 +179,6 @@ function layoutLinearGrid(options) {
 }
 
 
-function MoveElementsFromEachOther(distance, elements) {   
-    var position = elements[0].dataset.x;
-    for (var index = 0; index < elements.length; index++) {
-      position = position + distance;
-      elements[index].dataset.x = position; 
-    }
-}
-
-function RescaleEveryTwoElements(scale, elements) {
-    for (var index = 0; index < elements.length; index+=2) {
-      elements[index].dataset.scale = 2; 
-    }
-}
-
-function layoutLinear(distance, scale) {
-      var elements = document.querySelectorAll(".step");
-      
-      elements[0].dataset.x = 0;
-      RescaleEveryTwoElements(scale, elements) ;
-      MoveElementsFromEachOther(distance, elements) ;
-}
-
 
 function layoutSnakeGrid(options) {
     var numberOfColumns = options.numberOfColumns;
@@ -254,15 +249,3 @@ function layoutVerticalGrid(options) {
 }
 
 
-function layoutVertical(options) {
-    var distance = options.distance;
-    var elements = document.querySelectorAll(".step");
-    var position = 100;
-    if (!distance || distance < 700) {
-        distance = 1000;
-    }
-    for (var index = 0; index < elements.length; index++) {
-        elements[index].dataset.y = position;
-        position = position + distance;
-    }
-}
