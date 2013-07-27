@@ -91,9 +91,10 @@ function layoutLinearGrid(options) {
         options.numberOfColumns = 5;
     }
     elements[0].dataset.x = 0; 
-    elements[0].dataset.y = 0;
-    for (var index = 0; index < elements.length; index++) {
-        if ((index + 1) % numberOfColumns === 0) {
+    elements[0].dataset.y = 0; 
+    
+    for (var i = 0; i < elements.length; i++) {
+        if ((i + 1) % numberOfColumns === 0) {
         MoveElementsFromEachOtherY(distanceY, elements);
         }
         else {
