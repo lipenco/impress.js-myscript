@@ -1,6 +1,3 @@
-
-
-
 function MoveElementsFromEachOtherX(distanceX, elements) {   
     var positionX = parseInt(elements[0].dataset.x);
     for (var index = 0; index < elements.length; index++) {
@@ -32,17 +29,7 @@ function RescaleEveryTwoElements(scale, elements) {
     }
 }
  
-function CreateGrid(numberOfColumns, elements) {
-  for (var index = 0; index < elements.length; index++) {
-        var positionY = parseInt(elements[0].dataset.y);
-        var positionX = parseInt(elements[0].dataset.x);
-        if ((index + 1) % numberOfColumns === 0) {
-            MoveElementsFromEachOtherY(distanceY, elements);
-        } else {
-            MoveElementsFromEachOtherX(distanceX, elements);
-        }
-    }
-}
+
 
 
 
@@ -76,6 +63,19 @@ function layoutDeep(distanceZ) {
     MoveElementsFromEachOtherZ(distanceZ, elements) ;
 }
 
+
+function CreateGrid(numberOfColumns, distanceX, distanceY, elements) {
+  var positionX = parseInt(elements[0].dataset.x);
+  var positionY = parseInt(elements[0].dataset.y);
+     for (var index = 0; index < elements.length; index++) {
+        if ((index + 1) % numberOfColumns === 0) {
+            MoveElementsFromEachOtherY(distanceY, elements);
+        } else {
+            MoveElementsFromEachOtherX(distanceX, elements);
+        }
+     }
+}
+
 function layoutLinearGrid(options) {
     var numberOfColumns = options.numberOfColumns;
     var distanceX = options.distanceX;
@@ -90,17 +90,9 @@ function layoutLinearGrid(options) {
     if (!numberOfColumns || numberOfColumns < 1) {
         options.numberOfColumns = 5;
     }
-    elements[0].dataset.x = 0; 
-    elements[0].dataset.y = 0; 
-    
-    for (var i = 0; i < elements.length; i++) {
-        if ((i + 1) % numberOfColumns === 0) {
-        MoveElementsFromEachOtherY(distanceY, elements);
-        }
-        else {
-        MoveElementsFromEachOtherX(distanceX, elements);
-        }
-    }
+     elements[0].dataset.x = 0; 
+      elements[0].dataset.y = 0; 
+    CreateGrid(numberOfColumns, distanceX, distanceY, elements);      
 }
 
 // function layoutLinearGrid(options) {
