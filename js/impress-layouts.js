@@ -183,13 +183,13 @@ function layoutVerticalGrid(options) {
     }
      elements[0].dataset.x = 0; 
      elements[0].dataset.y = 0;
-     for (var index = 0; index < elements.length; index++) {
-        if (index % numberOfColumns === 0) {
+     
+        if ( ???? % numberOfColumns === 0) {
             MoveElementsFromEachOtherX(distanceX, elements);
         } else {
             MoveElementsFromEachOtherY(distanceY, elements);
         } 
-    }  
+     
 }
 
 
