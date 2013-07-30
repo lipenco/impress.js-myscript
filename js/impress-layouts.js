@@ -165,6 +165,31 @@ function layoutSnakeGrid(options) {
     }
 }
 
+// Why does not it work?
+
+// function layoutVerticalGrid(options) {
+//     var numberOfColumns = options.numberOfColumns;
+//     var distanceX = options.distanceX;
+//     var distanceY = options.distanceY;
+//     var elements = document.querySelectorAll(".step");
+//     if (!distanceX || distanceX < 900) {
+//         distanceX = 1500;
+//     }
+//     if (!distanceY || distanceY < 700) {
+//         distanceY = 1000;
+//     }
+//     if (!numberOfColumns || numberOfColumns < 1) {
+//         numberOfColumns = 5;
+//     }
+//      elements[0].dataset.x = 0; 
+//      elements[0].dataset.y = 0;
+//         if (????? % numberOfColumns === 0) {
+//             MoveElementsFromEachOtherX(distanceX, elements);
+//         } else {
+//             MoveElementsFromEachOtherY(distanceY, elements);
+//         }   
+// }
+
 
 function layoutVerticalGrid(options) {
     var numberOfColumns = options.numberOfColumns;
