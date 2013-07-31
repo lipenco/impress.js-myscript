@@ -1,5 +1,3 @@
-
-
 function layoutCircleV1(options) {
     var radius = options.radius;
     var elements = document.querySelectorAll(".step");
@@ -165,13 +163,14 @@ function layoutSnakeGrid(options) {
     }
 }
 
-// Why does not it work?
 
 function layoutVerticalGrid(options) {
     var numberOfColumns = options.numberOfColumns;
     var distanceX = options.distanceX;
     var distanceY = options.distanceY;
     var elements = document.querySelectorAll(".step");
+    var positionX = 100;
+    var positionY = 100;
     if (!distanceX || distanceX < 900) {
         distanceX = 1500;
     }
@@ -181,45 +180,17 @@ function layoutVerticalGrid(options) {
     if (!numberOfColumns || numberOfColumns < 1) {
         numberOfColumns = 5;
     }
-     elements[0].dataset.x = 0; 
-     elements[0].dataset.y = 0;
-     
-        if ( ???? % numberOfColumns === 0) {
-            MoveElementsFromEachOtherX(distanceX, elements);
+    for (var index = 0; index < elements.length; index++) {
+        elements[index].dataset.x = positionX;
+        elements[index].dataset.y = positionY;
+        if ((index + 1) % numberOfColumns === 0) {
+            positionX = positionX + distanceX;
+            positionY = 100;
         } else {
-            MoveElementsFromEachOtherY(distanceY, elements);
-        } 
-     
+            positionY = positionY + distanceY;
+        }
+    }
 }
-
-
-// function layoutVerticalGrid(options) {
-//     var numberOfColumns = options.numberOfColumns;
-//     var distanceX = options.distanceX;
-//     var distanceY = options.distanceY;
-//     var elements = document.querySelectorAll(".step");
-//     var positionX = 100;
-//     var positionY = 100;
-//     if (!distanceX || distanceX < 900) {
-//         distanceX = 1500;
-//     }
-//     if (!distanceY || distanceY < 700) {
-//         distanceY = 1000;
-//     }
-//     if (!numberOfColumns || numberOfColumns < 1) {
-//         numberOfColumns = 5;
-//     }
-//     for (var index = 0; index < elements.length; index++) {
-//         elements[index].dataset.x = positionX;
-//         elements[index].dataset.y = positionY;
-//         if ((index + 1) % numberOfColumns === 0) {
-//             positionX = positionX + distanceX;
-//             positionY = 100;
-//         } else {
-//             positionY = positionY + distanceY;
-//         }
-//     }
-// }
 
 
 function MoveElementsFromEachOtherX(distanceX, elements) {   
@@ -281,7 +252,7 @@ function layoutDeep(distanceZ) {
         distanceZ = 1000;
     }
     elements[0].dataset.z = 0; 
-    MoveElementsFromEachOtherZ(distanceZ, elements) ;
+    MoveElementsFromEachOtherZ(distanceZ, elements);
 }
 
 
