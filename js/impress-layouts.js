@@ -76,7 +76,6 @@ function layoutCircleV4(options) {
 function layoutChain(options) {
     var distance = options.distance;
     var elements = document.querySelectorAll(".step");
-    var r = 1024 / (2 * Math.tan(Math.PI / elements.length));
     var positionX = 0;
     if (!distance || distance < 700) {
         distance = 700;
